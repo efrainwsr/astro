@@ -1,0 +1,235 @@
+---
+
+/*interface Props {
+    name: string;
+    img: string;
+    id: number;
+    weight: number;
+}*/
+
+const {name, img, id, types} = Astro.props;
+
+---
+<div class="w-64 pb-2">
+  <div class="bg-gray-300"> 
+    <img class="w-34 mx-auto text-center" src={img} />
+  </div>
+  <p class="text-gray-400 text-sm font-bold">N. {id}</p>
+  <h3 class="text-2xl">{name}</h3>
+  <div>
+    {
+      types.map(type =>
+        <span class:list={[
+          "bg-green-600 rounded-md text-white text-sm px-3 capitalize mr-1",
+          {
+            "background-color-grass text-black": type=='grass',
+            "background-color-poison": type=='poison',
+            "background-color-fire": type=='fire',
+            "background-color-water"  : type=='water',
+            "background-color-bug": type=='bug',
+            "background-color-dark": type=='dark',
+            "background-color-dragon": type=='dragon',
+            "background-color-electric": type=='electric',
+            "background-color-fairy": type=='fairy',
+            "background-color-fighting": type=='fighting',
+            "background-color-flying": type=='flying',
+            "background-color-ghost": type=='ghost',
+            "background-color-ground": type=='ground',
+            "background-color-ice": type=='bugice',
+            "background-color-normal": type=='normal',
+            "background-color-psychic": type=='psychic',
+            "background-color-rock": type=='rock',
+            "background-color-steel": type=='steel',
+            
+
+          }
+        ]}
+        >{type} </span>
+      )
+    }
+    
+  </div>
+</div>
+
+
+<style>
+  .background-color-bug {
+  background: -webkit-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -ms-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -moz-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: -o-linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background: linear-gradient(180deg, #729f3f 50%, #729f3f 50%);
+  background-color: #729f3f;
+  color: #fff
+}
+
+.background-color-dark {
+  background: -webkit-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -ms-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -moz-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: -o-linear-gradient(180deg, #707070 50%, #707070 50%);
+  background: linear-gradient(180deg, #707070 50%, #707070 50%);
+  background-color: #707070;
+  color: #fff
+}
+
+.background-color-dragon {
+  background: -webkit-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -ms-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -moz-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: -o-linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  background-color: #53a4cf;
+  color: #fff
+}
+
+.background-color-electric {
+  background: -webkit-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -ms-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -moz-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: -o-linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background: linear-gradient(180deg, #eed535 50%, #eed535 50%);
+  background-color: #eed535;
+  color: #212121
+}
+
+.background-color-fairy {
+  background: -webkit-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -ms-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -moz-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: -o-linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background: linear-gradient(180deg, #fdb9e9 50%, #fdb9e9 50%);
+  background-color: #fdb9e9;
+  color: #212121
+}
+
+.background-color-fighting {
+  background: -webkit-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -ms-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -moz-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: -o-linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background: linear-gradient(180deg, #d56723 50%, #d56723 50%);
+  background-color: #d56723;
+  color: #fff
+}
+
+.background-color-fire {
+  background: -webkit-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -ms-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -moz-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: -o-linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background: linear-gradient(180deg, #fd7d24 50%, #fd7d24 50%);
+  background-color: #fd7d24;
+  color: #fff
+}
+
+.background-color-flying {
+  background: -webkit-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -ms-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -moz-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: -o-linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background-color: #3dc7ef;
+  color: #212121
+}
+
+.background-color-ghost {
+  background: -webkit-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -ms-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -moz-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: -o-linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background: linear-gradient(180deg, #7b62a3 50%, #7b62a3 50%);
+  background-color: #7b62a3;
+  color: #fff
+}
+
+.background-color-grass {
+  background: -webkit-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -ms-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -moz-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: -o-linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background: linear-gradient(180deg, #9bcc50 50%, #9bcc50 50%);
+  background-color: #9bcc50;
+  color: #212121
+}
+
+.background-color-ground {
+  background: -webkit-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -ms-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -moz-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: -o-linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+  background-color: #f7de3f;
+  color: #212121
+}
+
+.background-color-ice {
+  background: -webkit-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -ms-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -moz-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: -o-linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background: linear-gradient(180deg, #51c4e7 50%, #51c4e7 50%);
+  background-color: #51c4e7;
+  color: #212121
+}
+
+.background-color-normal {
+  background: -webkit-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -ms-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -moz-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: -o-linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background: linear-gradient(180deg, #a4acaf 50%, #a4acaf 50%);
+  background-color: #a4acaf;
+  color: #212121
+}
+
+.background-color-poison {
+  background: -webkit-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -ms-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -moz-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: -o-linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background: linear-gradient(180deg, #b97fc9 50%, #b97fc9 50%);
+  background-color: #b97fc9;
+  color: #fff
+}
+
+.background-color-psychic {
+  background: -webkit-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -ms-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -moz-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: -o-linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background: linear-gradient(180deg, #f366b9 50%, #f366b9 50%);
+  background-color: #f366b9;
+  color: #fff
+}
+
+.background-color-rock {
+  background: -webkit-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -ms-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -moz-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: -o-linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background: linear-gradient(180deg, #a38c21 50%, #a38c21 50%);
+  background-color: #a38c21;
+  color: #fff
+}
+
+.background-color-steel {
+  background: -webkit-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -ms-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -moz-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: -o-linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background: linear-gradient(180deg, #9eb7b8 50%, #9eb7b8 50%);
+  background-color: #9eb7b8;
+  color: #212121
+}
+
+.background-color-water {
+  background: -webkit-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -ms-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -moz-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: -o-linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background: linear-gradient(180deg, #4592c4 50%, #4592c4 50%);
+  background-color: #4592c4;
+  color: #fff
+}
+</style>

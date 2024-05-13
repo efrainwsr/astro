@@ -1,0 +1,12 @@
+---
+
+const { title,url } = Astro.props;
+---
+
+<a href={url}>
+<button style="display:block">
+    <slot name="before"/>
+    {title}
+    <slot name="after"/>
+</button>
+</a>

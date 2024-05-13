@@ -1,0 +1,12 @@
+---
+const  { url, title, body} = Astro.props;
+---
+
+<div class="w-80">
+    <span class="inline-block w-4 text-violet-700"> <slot name="icon"/> </span>
+    <p class="inline-block">{title}</p>
+    <p class="my-3 text-gray-600">{body}</p>
+    <a href={url} class="-mb-6">
+        <p class="text-violet-700 font-sm font-bold">Learn more -></p>
+    </a>
+</div>

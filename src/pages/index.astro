@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import NavBar from '../layouts/NavBar.astro';
+import PokemonCard from '../components/PokemonCard.astro'
+import { pokemons } from '../services/pokemon';
+const usd = 36.30;
+
+//let data = await pokemons(10);
+//console.log(data)
+
+
+---
+<NavBar back="Volver a inicio" usdbs=  >
+
+</NavBar>
+
+<Layout title="Probando Astro 4.">
+	<Card></Card>
+	<br>
+
+	<!--
+	<div class="inline-grid grid-cols-4 gap-4">
+		{ data.map((pokemon) =>
+				<PokemonCard name={pokemon.name} weight={pokemon.weight} id = {pokemon.id}>
+					<img class="w-32 h-32" slot="abajo" src={pokemon.img} />
+				</PokemonCard>
+			)
+		}
+	</div>
+ -->
+</Layout>
+

@@ -1,0 +1,141 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../layouts/NavBar.astro";
+---
+
+<NavBar></NavBar>
+<Layout title="Grid ">
+
+    <!--
+    <div class="mt-5 grid grid-cols-3 text-center gap-4 my-2">
+        <div class="bg-red-400">d</div>
+        <div class="bg-red-400">d</div>
+        <div class="bg-red-400">d</div>
+        <div class="bg-red-400">d</div>
+    </div>
+
+    <div class="mt-5 grid grid-cols-1 sm:grid-cols-3 text-center gap-4 my-2">
+        <div class="bg-blue-400">d</div>
+        <div class="bg-blue-400">d</div>
+        <div class="bg-blue-400">d</div>
+        <div class="bg-blue-400">d</div>
+    </div>
+
+    <div class="mt-5 grid grid-cols-4 text-center gap-4 my-2">
+        <div class="bg-pink-400 col-span-2">B</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400 col-span-4">C</div>
+    </div>
+
+
+    <div class="mt-5 grid grid-cols-12 text-center gap-4 my-2">
+
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+        <div class="bg-pink-400">D</div>
+    </div>
+
+    <div class="mt-5 grid grid-cols-4 text-center gap-4 my-2">
+        <div class="bg-green-400 col-start-2">X</div>
+        <div class="bg-green-400">D</div>
+        <div class="bg-green-400">D</div>
+        <div class="bg-green-400 col-end-3">F</div>
+    </div>
+
+-->
+
+<div class="grid grid-rows-1 mt-4">
+    <div class="grid grid-cols-2">
+
+        <p class="text-md my-4 font-bold text-gray-500">Dashboard</p>
+        
+        <div class="grid grid-cols-12">
+
+                <input type="text" placeholder="15/04/2020" class="bg-slate-300 rounded-sm col-start-7 col-span-3 h-10 my-auto border-0 bg-transparent py-1.5 pl-2 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="janesmith">
+           
+                <button class="bg-indigo-400 w-10 h-10 my-auto text-white rounded-r-md shadow-lg">
+                    <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-calendar"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z" /><path d="M16 3v4" /><path d="M8 3v4" /><path d="M4 11h16" /><path d="M11 15h1" /><path d="M12 15v3" /></svg>
+                </button>
+        
+                <button class="bg-indigo-400 w-10 h-10 my-auto text-white shadow-lg">
+                    <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-refresh"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4" /><path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4" /></svg>
+                </button>
+              
+                <button class="bg-indigo-400 w-10 h-10 my-auto mx-auto text-white shadow-lg">
+                    <svg class="mx-auto" xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-filter"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h16v2.172a2 2 0 0 1 -.586 1.414l-4.414 4.414v7l-6 2v-8.5l-4.48 -4.928a2 2 0 0 1 -.52 -1.345v-2.227z" /></svg>
+                </button>   
+        </div>
+    </div>
+</div>
+
+
+                       <!--                  PANEL DISTRIBUTION                                -->
+
+<div class="grid grid-rows-2 grid-cols-12 mt-4 gap-6">
+
+    <div class="col-span-3 bg-white ">
+        <p class="mt-6 ml-6 text-slate-400">Customers</p>
+        <p class="my-2 ml-6 text-2xl text-slate-500 font-bold">32,678</p>
+        <p class="text-green-600 inline-block ml-6 ">
+            <svg class="my-auto" xmlns="http://www.w3.org/2000/svg" width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+        </p>
+        <p class="my-2 ml-2 bg-white text-green-500 inline-block">5.27 %</p> 
+        <p class="mb-6 ml-12 bg-white text-slate-400 inline-block"> Since last month</p> 
+    </div>
+
+    <div class="col-span-3 bg-white ">
+        <p class="mt-6 ml-6 text-slate-400">Customers</p>
+        <p class="my-2 ml-6 text-2xl text-slate-500 font-bold">32,678</p>
+        
+        <div class="" >
+        <p class="text-green-600 inline-block ml-6 ">
+            <svg class="my-auto" xmlns="http://www.w3.org/2000/svg" width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+        </p>
+        <p class="my-2 ml-2 bg-white text-green-500 inline-block">5.27 %</p> 
+        <p class="mb-6 ml-12 bg-white text-slate-400 inline-block"> Since last month</p> 
+        </div>
+    </div>
+
+    <div class="row-span-2 col-span-6 bg-white">
+        <div class="grid grid-cols-5 mt-6">
+            <p class="ml-6 col-span-4 bg-white text-slate-500 font-bold">PROJECTIONS VS ACTUALS</p>
+            <svg class="col-start-6 mr-4"  xmlns="http://www.w3.org/2000/svg"  width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-dots-vertical"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 19m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+        </div>
+
+        <img class="-ml-3.5" src="../../public/bar.png"/>
+    </div>
+
+    <div class="col-span-3 bg-white ">
+        <p class="mt-6 ml-6 text-slate-400">Customers</p>
+        <p class="my-2 ml-6 text-2xl text-slate-500 font-bold">32,678</p>
+        <p class="text-green-600 inline-block ml-6 ">
+            <svg class="my-auto" xmlns="http://www.w3.org/2000/svg" width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+        </p>
+        <p class="my-2 ml-2 bg-white text-green-500 inline-block">5.27 %</p> 
+        <p class="mb-6 ml-12 bg-white text-slate-400 inline-block"> Since last month</p> 
+    </div>
+
+    <div class="col-span-3 bg-white ">
+        <p class="mt-6 ml-6 text-slate-400">Customers</p>
+        <p class="my-2 ml-6 text-2xl text-slate-500 font-bold">32,678</p>
+        <p class="text-green-600 inline-block ml-6 ">
+            <svg class="my-auto" xmlns="http://www.w3.org/2000/svg" width="16"  height="16"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-trending-up"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 17l6 -6l4 4l8 -8" /><path d="M14 7l7 0l0 7" /></svg>
+        </p>
+        <p class="my-2 ml-2 bg-white text-green-500 inline-block">5.27 %</p> 
+        <p class="mb-6 ml-12 bg-white text-slate-400 inline-block"> Since last month</p> 
+    </div>
+
+</div>
+
+
+</Layout>

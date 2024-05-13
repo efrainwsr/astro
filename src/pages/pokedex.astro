@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../layouts/NavBar.astro";
+import PokemonCard from "../components/PokemonCard.astro";
+import { pokemons } from "../services/pokemons";
+import { pathHasLocale } from "astro:i18n";
+//import { pokemons } from "../services/pokemon";
+//console.log(pokemons[0])
+
+const poke = []; 
+
+function random(min, max) {
+    return Math.floor((Math.random() * (max - min + 1)) + min);
+}
+    
+for(let i=0; i<25; i++){
+    let rand = random(1, 1000)
+    poke.push(pokemons[rand])
+}
+
+
+//console.log(poke)
+---
+
+
+
+<NavBar></NavBar>
+<Layout title="Pokedex">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:grid-cols-4 mb-3 ">
+        {
+            poke.map( pokemon =>
+            <div class="mt-6 mx-auto">
+                <PokemonCard  name={pokemon.name} id={pokemon.number} img={pokemon.ThumbnailImage} types={pokemon.type} />    
+            </div>
+        )
+        }
+    </div>
+    
+</Layout>
